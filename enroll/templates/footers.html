@@ -1,0 +1,50 @@
+{% load static %}
+ <!-- footer @s -->
+                <div class="nk-footer">
+                    <div class="container-fluid">
+                        <div class="nk-footer-wrap">
+                            <div class="nk-footer-copyright"> &copy; 2021 Registration Process by <a href="javascript:void" >Donald Nwokoro</a>
+                            </div>
+                            <div class="nk-footer-links">
+                                <ul class="nav nav-sm">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- footer @e -->
+ </div>
+</div>
+        <!-- main @e -->
+    </div>
+<!-- JavaScript -->
+    <script src="{% static 'js/bundle.js' %}"></script>
+<!--  <script src="{% static 'js/scrumboard.js' %}"></script>-->
+
+    <script src="{% static 'js/sweetalert2.all.min.js' %}"></script>
+
+ <script src="{% static 'js/all.js' %}"></script>
+   <script src="{% static 'js/jquery-ui-1.12.1/jquery-ui.js' %}"></script>
+    <script>
+$(document).ready(function(){
+              $(".datetimeinput").datepicker({changeYear: true,changeMonth: true, dateFormat: 'yy-mm-dd'});
+});
+    </script>
+
+<script>
+       var CurURL = window.location.href, urlSplit = CurURL.split("#");
+	var $nav_link = $(".nk-menu-link, .menu-link, .nav-link");
+	if ($nav_link.length > 0) {
+		$nav_link.each(function() {
+			if (CurURL === (this.href) && (urlSplit[1]!=="")) {
+				$(this).closest("li").addClass("active").parent().closest("li").addClass("active");
+			}
+		});
+	}
+    </script>
+    <script src="{% static 'js/scripts.js' %}"></script>
+    <script src="{% static 'js/charts/chart-ecommerce.js' %}"></script>
+
+</body>
+
+</html>

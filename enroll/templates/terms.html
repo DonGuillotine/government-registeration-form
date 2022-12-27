@@ -1,0 +1,24 @@
+{% include 'headers.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+<div class="nk-content ">
+    <div class="container-fluid">
+
+
+<div class="card">
+    <div class="card-body">
+              <form method="POST" action="">
+                      <p>Please read the terms and conditions carefully before registration  {% csrf_token %}
+                        {{form | crispy}}
+                 I agree to these terms and conditions</p>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+{% include 'footers.html' %}
